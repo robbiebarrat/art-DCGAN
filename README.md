@@ -57,4 +57,23 @@ name=generation1                  -- just to make sure you don't overwrite anyth
 Due to the nature of github, and the 100+ MB nature of the pre-trained networks, you'll have to click a link to get the pre-trained models, but it's worth it. Below are some of them and examples of what they can generate.
 
 
-#### I'll add this in a second... ####
+### Landscape GAN ###
+![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/landscapenet_waifu2x.png)
+#### Download the weights! ####
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8) #####
+
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM) #####
+
+### Portrait GAN ###
+![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/portraitnet_waifu2x.png)
+#### Download the weights ####
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA) #####
+
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE) #####
+
+### Trained networks coming soon: ###
+* Abstract Art
+* Cityscapes
+* Maybe an anime one because there are so many of those
+* Maybe I'll load the pre-trained landscape ones and start training them on portraits... that might be cool...
+* if you have a suggestion for a pre-trained net - I've opened up an issue where you can comment your ideas, or send me drive links to t7 files.
