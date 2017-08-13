@@ -1,5 +1,5 @@
-# Cool-DCGAN
-Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf). 
+# art-DCGAN
+Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks.
 
 ## The most notable changes are:
 * Doubled image size - now 128x128 instead of 64x64 (added a layer in both networks)
