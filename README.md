@@ -15,6 +15,10 @@ Modified version of [Soumith Chintala's torch implementation](https://github.com
 
 
 ## Usage:
+### Prerequisites: ###
+See [INSTALL.md](INSTALL.md)
+
+### General Usage: ###
 The usage is identical to Soumith's - with the exception of loading from a checkpoint.
 
 ### Train a GAN on a folder of images
