@@ -3,17 +3,17 @@ require 'nn'
 require 'optim'
 
 opt = {
-   dataset = 'lsun',       -- imagenet / lsun / folder
+   dataset = 'folder',       -- imagenet / lsun / folder
    batchSize = 64,
-   loadSize = 96,
-   fineSize = 64,
+   loadSize = 129,
+   fineSize = 128,
    netG = '',
    netD = '',
    nz = 100,               -- #  of dim for Z
-   ngf = 64,               -- #  of gen filters in first conv layer
-   ndf = 64,               -- #  of discrim filters in first conv layer
+   ngf = 160,               -- #  of gen filters in first conv layer
+   ndf = 40,               -- #  of discrim filters in first conv layer
    nThreads = 4,           -- #  of data loading threads to use
-   niter = 25,             -- #  of iter at starting learning rate
+   niter = 100,             -- #  of iter at starting learning rate
    lr = 0.0002,            -- initial learning rate for adam
    beta1 = 0.5,            -- momentum term of adam
    ntrain = math.huge,     -- #  of examples per epoch. math.huge for full dataset
@@ -96,7 +96,7 @@ end
 
 
 if (opt.netD ~= '') then
-  print('Initializing discriminator network from' .. opt.netD)
+  print('Initializing discriminator network from ' .. opt.netD)
   netD = torch.load(opt.netD)
 else 
   netD = nn.Sequential()
