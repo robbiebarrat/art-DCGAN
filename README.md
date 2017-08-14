@@ -78,6 +78,14 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 ##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM) #####
 
+### Nude-Portrait GAN ###
+![Batch of Nude-Portraits](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/nudenet_waifu2x.png)
+#### Download the weights! ####
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE) #####
+
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKUjdrckNQeGZqME0) #####
+
+
 ### Portrait GAN ###
 ![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/portraitnet_waifu2x.png)
 #### Download the weights ####
