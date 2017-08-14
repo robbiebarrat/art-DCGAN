@@ -86,7 +86,8 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 ##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE) #####
 
 ### Trained networks coming soon: ###
-* Abstract Art
+* Flower Paintings!
+* Nude paintings (the results are looking super cool so far)
 * Cityscapes
 * Maybe an anime one because there are so many of those
 * Maybe I'll load the pre-trained landscape ones and start training them on portraits... that might be cool...
