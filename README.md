@@ -19,7 +19,13 @@ Modified version of [Soumith Chintala's torch implementation](https://github.com
 See [INSTALL.md](INSTALL.md)
 
 ### General Usage: ###
-The usage is identical to Soumith's - with the exception of loading from a checkpoint.
+The usage is identical to Soumith's - with the exception of loading from a checkpoint, and the fact that an artwork scraper is included with this project.
+
+### Scraping Images from Wikiart ###
+`genre-scraper.py` will allow you to scrape artworks from wikiart based on their genres. The usage is quite simple.
+In `genre-scraper.py` there is a variable called `genre_to_scrape` - simply change that to any of the genre's listed on (this page)[https://www.wikiart.org/en/paintings-by-genre/], or to any of the values in the huge list of comments right after `genre_to_scrape` is defined. 
+
+Run the program with python3 and a folder with the name of your genre will be created, with a subdirectory "images/" containing all of the jpgs. Point your GAN to the directory with the name of your genre (so if I did landscapes, i'd just change `genre_to_scrape` to "landscape", and then run my GAN with DATA_ROOT=landscape)
 
 ### Train a GAN on a folder of images
 
@@ -59,12 +65,6 @@ noisemode=normal, line, linefull  -- pass ONE of these. If you pass line, pass b
 name=generation1                  -- just to make sure you don't overwrite anything cool, change the filename with this
 ```
 ####There are more passable arguments on [the unmodified network's page](https://github.com/soumith/dcgan.torch#all-training-options) - I think I included the more important ones here though####
-
-### Scraping Images from Wikiart ###
-`genre-scraper.py` will allow you to scrape artworks from wikiart based on their genres. The usage is quite simple.
-In `genre-scraper.py` there is a variable called `genre_to_scrape` - simply change that to any of the genre's listed on (this page)[https://www.wikiart.org/en/paintings-by-genre/], or to any of the values in the huge list of comments right after `genre_to_scrape` is defined. 
-
-Run the program with python3 and a folder with the name of your genre will be created, with a subdirectory "images/" containing all of the jpgs. Point your GAN to the directory with the name of your genre (so if I did landscapes, i'd just change `genre_to_scrape` to "landscape", and then run my GAN with DATA_ROOT=landscape)
 
 
 ## Pre-trained networks ##
