@@ -1,5 +1,5 @@
 # art-DCGAN
-Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks.
+Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks. 
 
 ## The most notable changes are:
 * Doubled image size - now 128x128 instead of 64x64 (added a layer in both networks)
@@ -12,41 +12,43 @@ Modified version of [Soumith Chintala's torch implementation](https://github.com
 
 * The inclusion of multiple pre-trained GAN's (.t7 files) that can generate various types of images, including 128x128 landscape oil paintings, 128x128 nude oil paintings, and others highlighted below.
 
-## Examples / Pre-trained networks ##
+### Scroll down for usage!
+
+# Examples / Pre-trained networks
 Due to the nature of github, and the 100+ MB nature of the pre-trained networks, you'll have to click a link to get the pre-trained models, but it's worth it. Below are some of them and examples of what they can generate.
 
 
-### Landscape GAN ###
+### Landscape GAN
 ![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/landscapenet_waifu2x.png)
-#### Download the weights! ####
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8) #####
+#### Download the weights!
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM) #####
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM)
 
-### Nude-Portrait GAN ###
+### Nude-Portrait GAN
 ![Batch of Nude-Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/nudenet_waifu2x.png)
-#### Download the weights! ####
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE) #####
+#### Download the weights!
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKUjdrckNQeGZqME0) #####
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKUjdrckNQeGZqME0)
 
 
-### Portrait GAN ###
+### Portrait GAN
 ![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/portraitnet_waifu2x.png)
-#### Download the weights ####
-##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA) #####
+#### Download the weights
+##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA)
 
-##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE) #####
+##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKMVh4S21BNlhzNEE)
 
 
 ## Usage:
-### Prerequisites: ###
+### Prerequisites:
 See [INSTALL.md](INSTALL.md)
 
-### General Usage: ###
+### General Usage:
 The usage is identical to Soumith's - with the exception of loading from a checkpoint, and the fact that an artwork scraper is included with this project.
 
-### Scraping Images from Wikiart ###
+### Scraping Images from Wikiart
 `genre-scraper.py` will allow you to scrape artworks from wikiart based on their genres. The usage is quite simple.
 In `genre-scraper.py` there is a variable called `genre_to_scrape` - simply change that to any of the genre's listed on (this page)[https://www.wikiart.org/en/paintings-by-genre/], or to any of the values in the huge list of comments right after `genre_to_scrape` is defined. 
 
@@ -54,7 +56,7 @@ Run the program with python3 and a folder with the name of your genre will be cr
 
 ### Train a GAN on a folder of images
 
-#### Start Training ####
+#### Start Training
 `
 DATA_ROOT=myimages dataset=folder ndf=50 ngf=150 th main.lua
 `
@@ -72,7 +74,7 @@ name=experiment1          -- just to make sure you don't overwrite anything cool
 ```
 
 
-#### Resume from checkpoint ####
+#### Resume from checkpoint
 `
 DATA_ROOT=myimages dataset=folder netD=checkpoints/your_discriminator_net.t7 netG=your_driscriminator_net.t7 th main.lua
 `
@@ -81,7 +83,7 @@ Passing ndf and ngf will have no effect here - as the networks are loaded from t
 ![difference](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/difference.png)
 
 
-#### Generate images with a pre-trained net ####
+#### Generate images with a pre-trained net
 `
 net=your_generator_net.t7 th generate.lua
 `
@@ -96,10 +98,6 @@ name=generation1                  -- just to make sure you don't overwrite anyth
 
 
 
-### Trained networks coming soon: ###
-* Flower Paintings!
-* Nude paintings (the results are looking super cool so far)
-* Cityscapes
-* Maybe an anime one because there are so many of those
-* Maybe I'll load the pre-trained landscape ones and start training them on portraits... that might be cool...
-* if you have a suggestion for a pre-trained net - I've opened up an issue where you can comment your ideas, or send me drive links to t7 files.
+### Coming soon
+* Pre-trained networks: flower paintings, cityscapes (comment in the open issue if you have suggestions!)
+* creating animated gifs of walks in the space of samples
