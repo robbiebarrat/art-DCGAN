@@ -101,3 +101,4 @@ name=generation1                  -- just to make sure you don't overwrite anyth
 ### Coming soon
 * Pre-trained networks: flower paintings, cityscapes (comment in the open issue if you have suggestions!)
 * creating animated gifs of walks in the space of samples
+* a gui for this whole thing...
