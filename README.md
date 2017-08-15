@@ -1,3 +1,7 @@
+<p align="right">
+<i>contact: robbiebarrat (at) gmail (dot) com</i>
+</p>
+
 # art-DCGAN
 Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks. 
 
