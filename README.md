@@ -4,7 +4,9 @@ Modified version of [Soumith Chintala's torch implementation](https://github.com
 ## The most notable changes are:
 * Doubled image size - now 128x128 instead of 64x64 (added a layer in both networks)
 
-* Ability to resume training from checkpoints (simply pass -netG=[path_to_network], and -netD=[path_to_network]). While this is convenient, it also allows for experimentation with training on one set of images, and then later in training shifting to another set of images. This could aid in certain tasks, much like how pre-training in an unsupervised fashion helps with supervised learning problems.
+* Ability to resume training from checkpoints (simply pass -netG=[path_to_network], and -netD=[path_to_network]). While this is convenient, it also allows for experimentation with training on one set of images, and then later in training shifting to another set of images. This allows you to train a landscape network, and then shift to abstract for a very short duration to get abstract landscapes like so - acting like a sort of style transfer for GANs.
+
+![difference](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/difference.png)
 
 * Included a horribly simple python script that will keep your checkpoint folder empty - it is meant for leaving running when you're training a GAN for a while, because sometimes I would come back to my computer in the morning after an overnight GAN session and have a hard drive with zero free bytes of disk space and a crashed GAN...
 
@@ -72,14 +74,14 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 
 ### Landscape GAN ###
-![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/landscapenet_waifu2x.png)
+![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/landscapenet_waifu2x.png)
 #### Download the weights! ####
 ##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUFBmV09VOWlmNG8) #####
 
 ##### [Discriminator](https://drive.google.com/open?id=0B-_m9VM1w1bKaC1MRkNiMHp0VHM) #####
 
 ### Nude-Portrait GAN ###
-![Batch of Nude-Portraits](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/nudenet_waifu2x.png)
+![Batch of Nude-Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/nudenet_waifu2x.png)
 #### Download the weights! ####
 ##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKdFJkdUFlNFRGRVE) #####
 
@@ -87,7 +89,7 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 
 ### Portrait GAN ###
-![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/Cool-DCGAN/master/images/portraitnet_waifu2x.png)
+![Batch of Portraits](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/portraitnet_waifu2x.png)
 #### Download the weights ####
 ##### [Generator](https://drive.google.com/open?id=0B-_m9VM1w1bKUXhmazg2eVF0bTA) #####
 
