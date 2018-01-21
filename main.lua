@@ -13,7 +13,8 @@ opt = {
    ngf = 160,               -- #  of gen filters in first conv layer
    ndf = 40,               -- #  of discrim filters in first conv layer
    nThreads = 4,           -- #  of data loading threads to use
-   niter = 100,             -- #  of iter at starting learning rate
+   niter = 10000,          -- #  of iter at starting learning rate
+   saveIter = 100,         -- # of epochs per save
    lr = 0.0002,            -- initial learning rate for adam
    beta1 = 0.5,            -- momentum term of adam
    ntrain = math.huge,     -- #  of examples per epoch. math.huge for full dataset
@@ -70,7 +71,7 @@ local SpatialFullConvolution = nn.SpatialFullConvolution
 if (opt.netG ~= '') then
   print('Initializing generator network from ' .. opt.netG)
   netG = torch.load(opt.netG)
-else 
+else
   netG = nn.Sequential()
   -- input is Z, going into a convolution
   netG:add(SpatialFullConvolution(nz, ngf * 16, 4, 4))
@@ -98,7 +99,7 @@ end
 if (opt.netD ~= '') then
   print('Initializing discriminator network from ' .. opt.netD)
   netD = torch.load(opt.netD)
-else 
+else
   netD = nn.Sequential()
   -- input is (nc) x 128 x 128
   netD:add(SpatialConvolution(nc, ndf, 4, 4, 2, 2, 1, 1))
@@ -256,13 +257,16 @@ for epoch = 1, opt.niter do
                  errG and errG or -1, errD and errD or -1))
       end
    end
-   paths.mkdir('checkpoints')
-   parametersD, gradParametersD = nil, nil -- nil them to avoid spiking memory
-   parametersG, gradParametersG = nil, nil
-   torch.save('checkpoints/' .. opt.name .. '_' .. epoch .. '_net_G.t7', netG:clearState())
-   torch.save('checkpoints/' .. opt.name .. '_' .. epoch .. '_net_D.t7', netD:clearState())
-   parametersD, gradParametersD = netD:getParameters() -- reflatten the params and get them
-   parametersG, gradParametersG = netG:getParameters()
+   if epoch % opt.saveIter == 0 then
+     paths.mkdir('checkpoints')
+     parametersD, gradParametersD = nil, nil -- nil them to avoid spiking memory
+     parametersG, gradParametersG = nil, nil
+     torch.save('checkpoints/' .. opt.name .. '_' .. epoch .. '_net_G.t7', netG:clearState())
+     torch.save('checkpoints/' .. opt.name .. '_' .. epoch .. '_net_D.t7', netD:clearState())
+     parametersD, gradParametersD = netD:getParameters() -- reflatten the params and get them
+     parametersG, gradParametersG = netG:getParameters()
+     print('Saved checkpoint: '..epoch)
+   end
    print(('End of epoch %d / %d \t Time Taken: %.3f'):format(
             epoch, opt.niter, epoch_tm:time().real))
 end
