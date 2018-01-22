@@ -36,7 +36,11 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 * Ability to resume training from checkpoints (simply pass -netG=[path_to_network], and -netD=[path_to_network]). While this is convenient, it also allows for experimentation with training on one set of images, and then later in training shifting to another set of images. This allows you to train a landscape network, and then shift to abstract for a very short duration to get abstract landscapes (see example below in the "resume from checkpoint" section) - acting like a sort of style transfer for GANs.
 
+<<<<<<< HEAD
 * Included a simple shell script that will keep the checkpoints folder reasonably empty - it is meant for leaving running when training a GAN. Default behavior is to keep the most recent 5 checkpoints of both the discriminator and generator for each different experiment name.
+=======
+* Included a simple shell script that will keep your checkpoint reasonably empty - it is meant for leaving running when training a GAN. Default behavior is to keep the most recent 5 checkpoints of both the discriminator and generator for each different experiment name.
+>>>>>>> f2950c4411736c9df159ffdc7a38df2a8753d4cc
 
 * Added a python 3 script (genre-scraper.py) that allows easy image-scraping from wikiart into the format the GAN can draw from.
 
