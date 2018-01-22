@@ -3,7 +3,7 @@
 </p>
 
 # art-DCGAN
-Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks. 
+Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks.
 
 # Examples / Pre-trained networks
 Due to the nature of github, and the 100+ MB nature of the pre-trained networks, you'll have to click a link to get the pre-trained models, but it's worth it. Below are some of them and examples of what they can generate.
@@ -36,7 +36,7 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 
 * Ability to resume training from checkpoints (simply pass -netG=[path_to_network], and -netD=[path_to_network]). While this is convenient, it also allows for experimentation with training on one set of images, and then later in training shifting to another set of images. This allows you to train a landscape network, and then shift to abstract for a very short duration to get abstract landscapes (see example below in the "resume from checkpoint" section) - acting like a sort of style transfer for GANs.
 
-* Included a horribly simple python script that will keep your checkpoint folder empty - it is meant for leaving running when you're training a GAN for a while, because sometimes I would come back to my computer in the morning after an overnight GAN session and have a hard drive with zero free bytes of disk space and a crashed GAN...
+* Included a simple shell script that will keep the checkpoints folder reasonably empty - it is meant for leaving running when training a GAN. Default behavior is to keep the most recent 5 checkpoints of both the discriminator and generator for each different experiment name.
 
 * Added a python 3 script (genre-scraper.py) that allows easy image-scraping from wikiart into the format the GAN can draw from.
 
@@ -51,7 +51,7 @@ The usage is identical to Soumith's - with the exception of loading from a check
 
 ### Scraping Images from Wikiart
 `genre-scraper.py` will allow you to scrape artworks from wikiart based on their genres. The usage is quite simple.
-In `genre-scraper.py` there is a variable called `genre_to_scrape` - simply change that to any of the genre's listed on [this page](https://www.wikiart.org/en/paintings-by-genre/), or to any of the values in the huge list of comments right after `genre_to_scrape` is defined. 
+In `genre-scraper.py` there is a variable called `genre_to_scrape` - simply change that to any of the genre's listed on [this page](https://www.wikiart.org/en/paintings-by-genre/), or to any of the values in the huge list of comments right after `genre_to_scrape` is defined.
 
 Run the program with python3 and a folder with the name of your genre will be created, with a subdirectory "images/" containing all of the jpgs. Point your GAN to the directory with the name of your genre (so if I did landscapes, i'd just change `genre_to_scrape` to "landscape", and then run my GAN with DATA_ROOT=landscape)
 
