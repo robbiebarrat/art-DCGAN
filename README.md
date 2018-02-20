@@ -11,7 +11,7 @@ Due to the nature of github, and the 100+ MB nature of the pre-trained networks,
 ### Abstract Landscape GAN
 ![Batch of Abstract Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/abstractlandscapes.png)
 #### Download the weights!
-There is no download for abstract landscapes, yet. Scroll to the bottom to find out how to train your own from the regular landscapes network.
+There is no download for abstract landscapes, yet. Scroll to the bottom to find out how to train your own from the regular landscapes network (involves switching the dataset towards the end of training).
 
 ### Landscape GAN
 ![Batch of Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/images/landscapenet_waifu2x.png)
