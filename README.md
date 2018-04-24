@@ -6,7 +6,7 @@
 Modified version of [Soumith Chintala's torch implementation](https://github.com/soumith/dcgan.torch) of [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) with a focus on generating artworks.
 
 # Examples / Pre-trained networks
-Due to the nature of github, and the 100+ MB nature of the pre-trained networks, you'll have to click a link to get the pre-trained models, but it's worth it. Below are some of them and examples of what they can generate.
+Due to the nature of github, and the 100+ MB nature of the pre-trained networks, you'll have to click a link to get the pre-trained models, but it's worth it. Below are some of them and examples of what they can generate. **When using any outputs of the models, credit me. Don't sell the outputs of the pre-trained models, modified or not. If you have any questions email me before doing anything.**
 
 ### Abstract Landscape GAN
 ![Batch of Abstract Landscapes](https://raw.githubusercontent.com/robbiebarrat/art-DCGAN/master/abstractlandscapes.png)
