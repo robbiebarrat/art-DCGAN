@@ -109,3 +109,7 @@ name=generation1                  -- just to make sure you don't overwrite anyth
 * Pre-trained networks: flower paintings, cityscapes (comment in the open issue if you have suggestions!)
 * creating animated gifs of walks throughout latent space
 * a GUI for this whole thing... maybe...
+
+## discord chat for issues/enhancements and general discussion
+https://discord.gg/vUZEMaH
+
