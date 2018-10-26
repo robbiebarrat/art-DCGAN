@@ -101,7 +101,8 @@ imsize=1                          -- How large the image(s) should be (not in pi
 noisemode=normal, line, linefull  -- pass ONE of these. If you pass line, pass batchSize > 1 and imsize = 1, too.
 name=generation1                  -- just to make sure you don't overwrite anything cool, change the filename with this
 ```
-####There are more passable arguments on [the unmodified network's page](https://github.com/soumith/dcgan.torch#all-training-options) - I think I included the more important ones here though####
+
+#### There are more passable arguments on [the unmodified network's page](https://github.com/soumith/dcgan.torch#all-training-options) - I think I included the more important ones here though ####
 
 
 
