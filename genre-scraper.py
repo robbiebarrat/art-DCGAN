@@ -1,11 +1,12 @@
 # Updated/fixed version from Gene Kogan's "machine learning for artists" collection - ml4a.github.io
-
+# Huge shoutout to Gene Kogan for fixing this script - a second time - hahaha.
 import time
 import os
 import re
 import random
 import argparse
 import urllib
+import urllib.request
 import itertools
 import bs4
 from bs4 import BeautifulSoup
