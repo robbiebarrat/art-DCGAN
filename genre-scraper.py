@@ -5,7 +5,7 @@ import os
 import re
 import random
 import argparse
-import urllib
+import urllib2
 import itertools
 import bs4
 from bs4 import BeautifulSoup
