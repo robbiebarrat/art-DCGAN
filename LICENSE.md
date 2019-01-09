@@ -1,4 +1,4 @@
-BSD License
+(modified) BSD License
 
 For dcgan.torch software
 
