@@ -51,8 +51,10 @@ num_images = 0
 def get_painting_list(count, typep, searchword):
     try:
         time.sleep(3.0*random.random())  # random sleep to decrease concurrence of requests
+        hdr = {'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
         url = "https://www.wikiart.org/en/paintings-by-%s/%s/%d"%(typep, searchword, count)
-        soup = BeautifulSoup(urllib.request.urlopen(url), "lxml")
+        req = urllib.request.Request(url, headers=hdr)
+        soup = BeautifulSoup(urllib.request.urlopen(req), "lxml")
         regex = r'https?://uploads[0-9]+[^/\s]+/\S+\.jpg'
         url_list = re.findall(regex, str(soup.html()))
         count += len(url_list)
