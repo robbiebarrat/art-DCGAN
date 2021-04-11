@@ -40,7 +40,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--genre", help="which genre to scrape", choices=genre_list, default=None)
 parser.add_argument("--style", help="which style to scrape", choices=style_list, default=None)
 parser.add_argument("--num_pages", type=int, help="number of pages to scrape (leave blank to download all of them)", default=1000)
-parser.add_argument("--output_dir", help="where to put output files")
+parser.add_argument("--output_dir", help="where to put output files", default=None)
 
 num_downloaded = 0
 num_images = 0
