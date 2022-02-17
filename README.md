@@ -103,7 +103,19 @@ name=generation1                  -- just to make sure you don't overwrite anyth
 ```
 ####There are more passable arguments on [the unmodified network's page](https://github.com/soumith/dcgan.torch#all-training-options) - I think I included the more important ones here though####
 
+## Script usage:
 
+It's also possible to use only the `genre-scaper.py` script to download images by genre or style from Wikiart with the command:
+
+```
+python genre-scraper.py --genre genre_name [other optional flags]
+```
+
+To install the dependencies of the script use:
+
+```
+pip install -r requirements.txt
+```
 
 ### Coming soon
 * Pre-trained networks: flower paintings, cityscapes (comment in the open issue if you have suggestions!)
